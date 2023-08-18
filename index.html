@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="quiz-favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>knowledgeQuest</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-comp nav-head">
+            <img src="quiz-logo-1.png" alt="logo" id="logoimg" width="140px">
+        </div>
+
+        <div class="nav-comp nav-tab">
+            <a href="/" class="nav-link homeScreen" onclick="{window.location.reload()}">Home</a>
+            <a href="about.html" class="nav-link gameScreen">About</a>
+        </div>
+    </nav>
+
+    <div class="body-container">
+
+        <div class="initial-box start-screen d-hide">
+
+            <h2>IEM Aptitude test <span class="start-date">26 July 2023</span></h2>
+
+            <h4>Total Question : <span class="start-total-question-no">50</span> </h4>
+            <h4>Total Time : <span class="start-total-time">65</span> minutes </h4>
+
+            <button class="start-quiz-btn">Start quiz</button>
+
+        </div>
+
+        <div id="ins" class="initial-box instruction-screen-container d-hide">
+
+            <div class="instruction-screen">
+
+                <h2 style="text-align: center;"><i class="bi bi-info-circle" style="margin: 0px 5px;"></i>Instructions
+                </h2>
+
+                <h4 style="text-decoration: underline; ">General instructions</h4>
+
+                <li>
+                    The Question Palette displayed on the right side of the screen will show each question using one of
+                    the following symbols :
+                    <p>
+                        <span class="q-box unvisited"> 1 </span> You have not visited the question yet.
+                    </p>
+                    <p>
+                        <span class="q-box unanswered"> 3 </span> You have not answered the question.
+                    </p>
+                    <p>
+                        <span class="q-box answered"> 5 </span> You have answered the question.
+                    </p>
+                    <p>
+                        <span class="q-box unansweredX"> 7 </span> You have NOT answered the question, but have marked
+                        the question for review.
+                    </p>
+                    <p>
+                        <span class="q-box answeredX"> 9 </span> You have answered the question, but marked it for
+                        review.
+                    </p>
+                </li>
+
+                <li>
+                    The Marked for Review status for a question simply indicates that you would like to look at that
+                    question again. <i style="color: red;">If a question is answered and Marked for Review, your answer
+                        for that question will be considered in the evaluation.</i>
+                </li>
+
+                <li style="display: block; text-decoration: underline;"><b>Navigating to a question</b></li>
+
+                <li>To answer a question , do the following :</li>
+
+                <div class="ins-block" style=" list-style-type: lower-alpha; padding: 0 0 0 20px">
+
+                    <!-- <div style="display: block; list-style-type: lower-alpha;"> -->
+
+                    <li>
+                        Click on the question number in the Question Palette to go to that numbered question directly.
+                    </li>
+
+                    <li>
+                        Click on <b>Save & Next </b> to save your answer for the current question and then go to the
+                        next question.
+                    </li>
+
+                    <li>
+                        Click on <b>Mark for Review & Next </b> to save your answer for the current question, mark it
+                        for review, and then go to the next question.
+                    </li>
+
+                    <li>
+                        Caution : Note that your answer for the current question will not be saved, if you navigate to
+                        another question directly by clicking on its question number.
+                    </li>
+
+                    <!-- </div> -->
+
+                </div>
+
+                <li>
+                    You can view all the questions by clicking on the Question Paper button. Note that the options for
+                    multiple choice type questions will not be shown.
+                </li>
+
+                <li style="display: block; text-decoration: underline;"><b>Answering a question</b></li>
+
+                <li>Procedure for answering a multiple choice type question :</li>
+
+                <div class="ins-block" style=" list-style-type: lower-alpha; padding: 0 0 0 20px">
+
+                    <!-- <div style="display: block; list-style-type: lower-alpha;"> -->
+
+                    <li>
+                        To select your answer, click on the button of one of the options.
+                    </li>
+
+                    <li>
+                        To deselect your chosen answer, click on the button of the chosen option again or click on the
+                        <b>Clear Response</b> button.
+                    </li>
+
+                    <li>
+                        To change your chosen answer, click on the button of another option.
+                    </li>
+
+                    <li>
+                        To save your answer, you MUST click on <b>Save & Next</b> button.
+                    </li>
+
+                    <li>
+                        To mark the question for review, click on <b>Mark for Review & Next</b> button.
+                    </li>
+
+                    <li>
+                        If an answer is selected for a question that is 'Marked for Review', that answer will be
+                        considered in the evaluation even if it is not marked as 'Save & Next', at the time of final
+                        submission.
+                    </li>
+
+                    <!-- </div> -->
+
+                </div>
+
+                <li>
+                    To change your answer to a question that has already been answered, first select that question for
+                    answering and then follow the procedure for answering that type of question.
+                </li>
+
+                <li>
+                    Note that questions for which option has been chosen and answers are saved or marked for review will
+                    be considered for evaluation.
+                </li>
+
+            </div>
+
+            <button class="ins-start-btn">Start</button>
+
+        </div>
+
+        <div class="nav-test">
+            <div class="test-details">
+                <span class="test-name">IEM apti</span>
+                <span class="test-date">25 july 2023</span>
+            </div>
+
+            <div class="timer">
+                <button class="screen-mode-btn"><i class="bi bi-fullscreen-exit"></i></button>
+                <b>
+                    <span>Remaining Time :</span>
+                    <span class="count-down">00:00:00</span>
+                </b>
+            </div>
+        </div>
+
+        <div class="initial-box q-screen-container">
+
+            
+            <div class="q-screen-display">
+
+                <div class="question-papers">
+
+                </div>
+
+                <div class="control-btn">
+
+                    <span class="left-control-btn">
+
+                        <button class="save-next-btn">Save & Next</button>
+                        <button class="mark-next-btn">Mark for Review & Next</button>
+                        <button class="clear-response-btn">Clear Response</button>
+
+                    </span>
+
+                    <button class="test-submit-btn" >Submit</button>
+    
+                </div>
+
+            </div>
+
+            <div class="q-calendar" style="list-style-type: none;">
+
+                <div class="calendar-upper">
+
+                    <li>                        
+                        <span><span id="id-answered" class="q-box answered">1</span>Answered</span>
+                    </li>
+
+                    <li>                        
+                        <span><span id="id-unanswered" class="q-box unanswered">2</span>Not Answered</span>
+                    </li>
+
+                    <li>                        
+                        <span><span id="id-unvisited" class="q-box unvisited">3</span>Not visited</span>
+                    </li>
+
+                    <li>                        
+                        <span><span id="id-unansweredX" class="q-box unansweredX">3</span>Marked for Review</span>
+                    </li>
+
+                    <li>                        
+                        <span><span id="id-answeredX" class="q-box answeredX">3</span>Answered & Marked for Review (will be considered for evaluation)</span>
+                    </li>
+
+                </div>
+
+                <div class="calendar-lower">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="initial-box result-screen-container">
+
+            <div class="score-board">
+
+                <h3 class="badge-comment"></h3>
+                <div class="badge-box" style="text-align: right;">
+                    <!-- Badge Image -->
+                    <img src="" alt=""  width="15%" class="badge-logo">
+                </div>
+
+                <div class="remarks">
+                    <div class="progress-bar">
+                        <h3><span class="percent">0</span>%</h3>
+                    </div>
+                    <h3 class="comments" style="text-align: center; padding: 5px 0%;">---</h3>    
+                </div>  
+
+
+                <div class="marks-status">    
+                    <p class="marks-label time-label">Time Taken :</p>
+                    <p class="marks-count time-count">00:00:00</p>    
+                </div>
+
+                <div class="marks-status">    
+                    <p class="marks-label total-label">Total Question :</p>
+                    <p class="marks-count total-count">50</p>    
+                </div>
+
+                <div class="marks-status">    
+                    <p class="marks-label correct-label">Correct :</p>
+                    <p class="marks-count correct-count">0</p>    
+                </div>
+
+                <div class="marks-status">    
+                    <p class="marks-label incorrect-label">Incorrect :</p>
+                    <p class="marks-count incorrect-count">0</p>    
+                </div>
+
+                <div class="marks-status">    
+                    <p class="marks-label skipped-label">Skipped :</p>
+                    <p class="marks-count skipped-count">0</p>    
+                </div>
+
+                <div class="marks-status obtained">    
+                    <p class="marks-label obtained-label">Marks Obtained :</p>
+                    <p class="marks-count obtained-count">0</p>    
+                </div>
+
+
+                <button class="end-btn">Close</button>
+            </div>              
+
+        </div>
+
+    </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="script.js"></script>
+
+</html>
